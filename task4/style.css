@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-image: linear-gradient(60deg, red, orange);
+    text-align: center;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #555;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    color: #fff;
+}
+
+.footer {
+    background-color: #e5e5e5;
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+/*Main section*/
+
+.main {
+    display: flex;
+    flex-grow: 3;
+}
+
+.navigation,
+.section,
+.news {
+    padding: 0.5em;
+}
+
+.navigation {
+    width: 20%;
+}
+
+.section {
+    width: 60%;
+    font-size: 1.25em;
+    flex-grow: 1;
+}
+
+.news {
+    width: 20%;
+}
+
+.section>.units-list {
+    line-height: 1.75em;
+}
+
+.css-units {
+    color: #8b0000;
+    background-color: #e5e5e5;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+.section__header {
+    font-size: 5vw;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    color: white;
+    padding: 0;
+    /* display: flexbox; */
+}
+
+.nav-list-item {
+    background-color: #808080;
+    line-height: 2em;
+    margin-bottom: 0.5em;
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+    padding: 0;
+}
+
+.nav-list-link {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+picture {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+    .news,
+    .section,
+    .navigation {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .main {
+        flex-wrap: wrap;
+    }
+    .news {
+        width: 100%;
+    }
+    .section {
+        width: 80%;
+    }
+    .navigation {
+        width: 20%;
+    }
+}
+
+
+/* .nav-list-item a {
+    display: block;
+} */
